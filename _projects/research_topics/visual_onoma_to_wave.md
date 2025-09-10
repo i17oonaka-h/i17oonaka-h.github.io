@@ -2,7 +2,7 @@
 layout: page
 title: Visual onoma-to-wave
 description: accepted to ICASSP 2023
-img: assets/img/_projects/visual_onoma_to_wave/concepts.png
+img: assets/img/concepts.png
 importance: 1
 category: research topic
 related_publications: true

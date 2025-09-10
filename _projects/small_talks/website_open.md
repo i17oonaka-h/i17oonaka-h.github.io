@@ -2,7 +2,7 @@
 layout: page
 title: 個人サイトを google sites から github.io + al-folio に移行しました
 description: 思ったよりもすんなりできました．
-img: assets/img/_projects/website_open/top_view.png
+img: assets/img/top_view.png
 importance: 2
 category: small talk
 ---
