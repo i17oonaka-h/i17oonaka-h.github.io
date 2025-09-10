@@ -1,7 +1,8 @@
 ---
 page_id: about
 layout: about
-title: about me
+permalink: /index.html
+title: about
 subtitle: 
 
 profile:
