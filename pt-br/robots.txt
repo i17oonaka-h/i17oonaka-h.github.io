@@ -1,4 +1,0 @@
-User-agent: *
-Disallow:
-
-Sitemap: https://i17oonaka-h.github.io/sitemap.xml
