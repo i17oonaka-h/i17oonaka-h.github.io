@@ -420,12 +420,7 @@ ninja.data = [{
             },},{id: "news-a-simple-inline-announcement-with-markdown-emoji-sparkles-smile",
           title: 'A simple inline announcement with Markdown emoji! :sparkles: :smile:',
           description: "",
-          section: "News",},{id: "projects-project-7",
-          title: 'project 7',
-          description: "with background image",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/7_project/";
-            },},{id: "projects-project-8",
+          section: "News",},{id: "projects-project-8",
           title: 'project 8',
           description: "an other project with a background image and giscus comments",
           section: "Projects",handler: () => {
@@ -435,6 +430,21 @@ ninja.data = [{
           description: "another project with an image 🎉",
           section: "Projects",handler: () => {
               window.location.href = "/projects/9_project/";
+            },},{id: "projects-unsupervised-speech-enhancement-based-on-kurtosis-and-deep-prior",
+          title: 'Unsupervised speech enhancement based on kurtosis and deep prior',
+          description: "accepted to Acoustical Science and Technology (in 2025)",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/research_topics/unsupervised_speech_enhancement/";
+            },},{id: "projects-visual-onoma-to-wave",
+          title: 'Visual onoma-to-wave',
+          description: "accepted to ICASSP 2023",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/research_topics/visual_onoma_to_wave/";
+            },},{id: "projects-個人サイトを-google-sites-から-github-io-al-folio-に移行しました",
+          title: '個人サイトを google sites から github.io + al-folio に移行しました',
+          description: "思ったよりもすんなりできました．",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/small_talks/website_open/";
             },},{
         id: 'social-email',
         title: 'Send an email',
