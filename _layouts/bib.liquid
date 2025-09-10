@@ -45,6 +45,94 @@
     </div>
   {% endif %}
 
+  {% if site.enable_publication_thumbnails %}
+    <div class="col col-sm-2 abbr2">
+      {%- if entry.abbr2 -%}
+        {%- if site.data.venues[entry.abbr2] -%}
+          {% assign venue_style = null %}
+          {% if site.data.venues[entry.abbr2].color != blank %}
+            {% assign venue_style = site.data.venues[entry.abbr2].color | prepend: 'style="background-color:' | append: '"' %}
+          {%- endif -%}
+          <abbr2
+            class="badge rounded w-100"
+            {% if venue_style %}
+              {{ venue_style }}
+            {% endif -%}
+          >
+            {% if site.data.venues[entry.abbr2].url %}
+              <a href="{{ site.data.venues[entry.abbr2].url }}">{{ entry.abbr2 }}</a>
+            {% else %}
+              <div>{{- entry.abbr2 -}}</div>
+            {% endif %}
+          </abbr2>
+        {% else %}
+          <abbr2 class="badge rounded w-100">{{ entry.abbr2 }}</abbr2>
+        {% endif %}
+      {% endif %}
+      {% if entry.preview %}
+        {% if entry.preview contains '://' %}
+          <img class="preview z-depth-1 rounded" src="{{ entry.preview }}">
+        {% else %}
+          {% assign entry_path = entry.preview | prepend: '/assets/img/publication_preview/' %}
+          {%
+            include figure.liquid
+            loading="eager"
+            path=entry_path
+            sizes = "200px"
+            class="preview z-depth-1 rounded"
+            zoomable=true
+            avoid_scaling=false
+            alt=entry.preview
+          %}
+        {% endif %}
+      {% endif %}
+    </div>
+  {% endif %}
+
+  {% if site.enable_publication_thumbnails %}
+    <div class="col col-sm-2 abbr3">
+      {%- if entry.abbr3 -%}
+        {%- if site.data.venues[entry.abbr3] -%}
+          {% assign venue_style = null %}
+          {% if site.data.venues[entry.abbr3].color != blank %}
+            {% assign venue_style = site.data.venues[entry.abbr3].color | prepend: 'style="background-color:' | append: '"' %}
+          {%- endif -%}
+          <abbr3
+            class="badge rounded w-100"
+            {% if venue_style %}
+              {{ venue_style }}
+            {% endif -%}
+          >
+            {% if site.data.venues[entry.abbr3].url %}
+              <a href="{{ site.data.venues[entry.abbr3].url }}">{{ entry.abbr3 }}</a>
+            {% else %}
+              <div>{{- entry.abbr3 -}}</div>
+            {% endif %}
+          </abbr3>
+        {% else %}
+          <abbr3 class="badge rounded w-100">{{ entry.abbr3 }}</abbr3>
+        {% endif %}
+      {% endif %}
+      {% if entry.preview %}
+        {% if entry.preview contains '://' %}
+          <img class="preview z-depth-1 rounded" src="{{ entry.preview }}">
+        {% else %}
+          {% assign entry_path = entry.preview | prepend: '/assets/img/publication_preview/' %}
+          {%
+            include figure.liquid
+            loading="eager"
+            path=entry_path
+            sizes = "200px"
+            class="preview z-depth-1 rounded"
+            zoomable=true
+            avoid_scaling=false
+            alt=entry.preview
+          %}
+        {% endif %}
+      {% endif %}
+    </div>
+  {% endif %}
+
   <!-- Entry bib key -->
   <div id="{{ entry.key }}" class="{% if site.enable_publication_thumbnails %}col-sm-8{% else %}col-sm-10{% endif %}">
     <!-- Title -->
