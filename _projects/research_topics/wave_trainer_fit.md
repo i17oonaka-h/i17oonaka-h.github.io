@@ -46,8 +46,8 @@ To achieve this, we introduce trainable priors inspired by RestoreGrad [5].</b>
 
 ### Proposed method
 <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/projects/contents/wave_trainer_fit/wave_trainer_fit_overview.png" title="example image" class="img-fluid rounded z-depth-1" %}
-        Figure 2: Overview of the proposed model. During training, Posterior VAE derived from the target waveform and the SSL feature is used for noise sampling and gain adjustment. During inference, Prior VAE derived from the SSL feature is used for same process. Solid arrows are enabled during both training and inference.
+        {% include figure.liquid loading="eager" path="assets/projects/thumbnails/wave-trainer-fit.png" title="example image" class="img-fluid rounded z-depth-1" %}
+        Figure 1: Overview of the proposed model. During training, Posterior VAE derived from the target waveform and the SSL feature is used for noise sampling and gain adjustment. During inference, Prior VAE derived from the SSL feature is used for same process. Solid arrows are enabled during both training and inference.
 </div>
 
 We propose a neural vocoder with <b><u>train</u></b>abl<b><u>e</u></b> prio<b><u>r</u></b> and <b><u>f</u></b>ixed-point <b><u>it</u></b>eration (<b><u>WaveTrainerFit</u></b>) for improved waveform generation from SSL features. <font color="#00369f"><b>First, by introducing variational autoencoder (VAE)-based trainable priors, we achieve sampling of noise $\mathcal{S}(\Sigma)$ close to target waveform. Since inference can start from a point close to speech, high-quality waveform generation with fewer iterations and robustly maintaining speaker characteristics is expected. Furthermore, by imposing constraints on the priors to match the energy of speech, we realize reference-aware gain adjustment $\mathcal{G}_\mathrm{ssl}(z_t, \Sigma)$, which frees the vocoder from the implicit energy inference task. As a result, the model can focus on more important aspects of waveform modeling, and is thought to mitigate the difficulty of training.</b></font>
