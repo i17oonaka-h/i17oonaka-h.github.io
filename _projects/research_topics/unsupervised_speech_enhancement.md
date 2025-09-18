@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Unsupervised speech enhancement based on kurtosis and deep prior
-description: accepted to Acoustical Science and Technology (in 2025)
+description: accepted to Acoustical Science and Technology, 2025
 img: assets/projects/thumbnails/se_skddp.png
 importance: 1
 category: research topic

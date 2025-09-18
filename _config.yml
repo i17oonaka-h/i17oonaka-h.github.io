@@ -366,6 +366,7 @@ imagemagick:
   input_directories:
     - assets/img/
     - assets/projects/thumbnails/
+    - assets/projects/contents/wave_trainer_fit/imgs/
   input_formats:
     - ".jpg"
     - ".jpeg"
