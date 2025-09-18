@@ -432,7 +432,7 @@ ninja.data = [{
               window.location.href = "/projects/9_project/";
             },},{id: "projects-unsupervised-speech-enhancement-based-on-kurtosis-and-deep-prior",
           title: 'Unsupervised speech enhancement based on kurtosis and deep prior',
-          description: "accepted to Acoustical Science and Technology (in 2025)",
+          description: "accepted to Acoustical Science and Technology, 2025",
           section: "Projects",handler: () => {
               window.location.href = "/projects/research_topics/unsupervised_speech_enhancement/";
             },},{id: "projects-visual-onoma-to-wave",
@@ -440,6 +440,11 @@ ninja.data = [{
           description: "accepted to ICASSP 2023",
           section: "Projects",handler: () => {
               window.location.href = "/projects/research_topics/visual_onoma_to_wave/";
+            },},{id: "projects-wave-trainer-fit-neural-vocoder-with-trainable-prior-and-fixed-point-iteration-towards-high-quality-speech-generation-from-ssl-features",
+          title: 'Wave-Trainer-Fit: Neural Vocoder with Trainable Prior and Fixed-Point Iteration towards High-Quality Speech Generation...',
+          description: "Submitted to ICASSP 2026",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/research_topics/wave_trainer_fit/";
             },},{id: "projects-個人サイトを-google-sites-から-github-io-al-folio-に移行しました",
           title: '個人サイトを google sites から github.io + al-folio に移行しました',
           description: "思ったよりもすんなりできました．",
