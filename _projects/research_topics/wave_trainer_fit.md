@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Wave-Trainer-Fit: Neural Vocoder with Trainable Prior and Fixed-Point Iteration towards High-Quality Speech Generation from SSL features"
-description: Under review
+description: Accepted to ICASSP 2026
 img: assets/projects/thumbnails/wave-trainer-fit.png
 importance: 1
 category: research topic
