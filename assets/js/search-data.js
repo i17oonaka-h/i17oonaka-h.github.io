@@ -442,7 +442,7 @@ ninja.data = [{
               window.location.href = "/projects/research_topics/visual_onoma_to_wave/";
             },},{id: "projects-wave-trainer-fit-neural-vocoder-with-trainable-prior-and-fixed-point-iteration-towards-high-quality-speech-generation-from-ssl-features",
           title: 'Wave-Trainer-Fit: Neural Vocoder with Trainable Prior and Fixed-Point Iteration towards High-Quality Speech Generation...',
-          description: "Under review",
+          description: "Accepted to ICASSP 2026",
           section: "Projects",handler: () => {
               window.location.href = "/projects/research_topics/wave_trainer_fit/";
             },},{id: "projects-個人サイトを-google-sites-から-github-io-al-folio-に移行しました",
