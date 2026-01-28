@@ -2,7 +2,7 @@
 page_id: teaching
 layout: page
 permalink: /teaching/
-title: Education & Experience
+title: Education/Experience
 description: 
 nav: true
 nav_order: 6
@@ -10,7 +10,7 @@ nav_order: 6
 
 <div class="timeline">
 
-## 🎓 Education
+<h2>🎓 Education</h2>
 
 <div class="education-section">
   
@@ -52,9 +52,7 @@ nav_order: 6
 
 </div>
 
----
-
-## 💼 Professional Experience
+<h2>💼 Professional Experience</h2>
 
 <div class="experience-section">
 
