@@ -2,7 +2,7 @@
 page_id: teaching
 layout: page
 permalink: /teaching/
-title: Education/Experience
+title: History
 description: 
 nav: true
 nav_order: 6
@@ -10,18 +10,26 @@ nav_order: 6
 
 <div class="timeline">
 
-<h2>🎓 Education</h2>
+<h2>Education and Work history</h2>
 
 <div class="education-section">
+  <div class="education-item current">
+    <div class="year-range">2026.04-now</div>
+    <div class="institution">
+      <h3>LY Corporation</h3>
+      <div class="degree">Full-time Engineer</div>
+    </div>
+  </div>
   
   <div class="education-item current">
-    <div class="year-range">2024.04 — Present</div>
+    <div class="year-range">2024.04 — 2026.03</div>
     <div class="institution">
       <h3>NAIST (Nara Institute of Science and Technology)</h3>
       <div class="degree">Graduate School of Science and Technology, Information Science (Master's Course)</div>
       <div class="details">
         <span class="lab">🔬 Laboratory: Intelligent Robot Dialogue lab. (RIKEN)</span>
         <span class="supervisor">👨‍🏫 Supervisor: Prof. Koichiro Yoshino</span>
+        <span class="award">🎉 <a href="https://www.naist.jp/news/2026/03/011656.html" target="_blank" rel="noopener noreferrer">Best Student Award (NAIST)</a></span>
       </div>
     </div>
   </div>
@@ -52,13 +60,13 @@ nav_order: 6
 
 </div>
 
-<h2>💼 Professional Experience</h2>
+<h2>💼 Experience</h2>
 
 <div class="experience-section">
 
   <div class="experience-item current">
     <div class="period">
-      <span class="dates">2024.12 — Present</span>
+      <span class="dates">2024.12 — 2026.03</span>
       <span class="type">Part-time</span>
     </div>
     <div class="company">
@@ -75,11 +83,6 @@ nav_order: 6
         <h4>📝 Theme 2:</h4>
         <p>Neural Vocoder towards High-Quality Speech Generation from SSL features</p>
         <span class="status accepted">✅ Accepted to ICASSP 2026</span>
-      </div>
-      <div class="project">
-        <h4>📝 Theme 3:</h4>
-        <p>Work in progress...</p>
-        <span class="status ongoing">🚧 In Progress</span>
       </div>
     </div>
   </div>
@@ -222,7 +225,7 @@ nav_order: 6
   margin-top: 0.8rem;
 }
 
-.lab, .supervisor, .mentors {
+.lab, .supervisor, .mentors, .award {
   color: #495057;
   font-size: 0.9rem;
 }
