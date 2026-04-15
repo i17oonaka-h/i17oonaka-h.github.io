@@ -25,8 +25,4 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-I'm a master student of Nara Institute of Science and Technology (NAIST), Japan.
-My professor is <a href='https://pomdp.net/'>Koichiro Yoshino</a>.
-Also, I'm a part-time job engineer/researcher at <a href='https://research.lycorp.co.jp/en'>LY corp</a>.
-
-My reseach interests are spoken language processing and audio signal processing.
+I'm a full-time engineer of LY Corporation, Japan.
