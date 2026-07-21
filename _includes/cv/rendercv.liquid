@@ -74,14 +74,14 @@
               {% assign entry_date = entry.date | default: entry.releaseDate %}
               <li class="list-group-item">
                 <div class="row">
-                  <div class="col-xs-2 col-sm-2 col-md-2 text-center date-column">
+                  <div class="col-12 col-md-3 date-column">
                     {% if start_date %}
-                      <span class="badge font-weight-bold danger-color-dark align-middle" style="min-width: 75px">{{ start_date }} – {{ end_date | default: 'Present' }}</span>
+                      <span class="cv-date">{{ start_date }} – {{ end_date | default: 'Present' }}</span>
                     {% elsif entry_date %}
-                      <span class="badge font-weight-bold danger-color-dark align-middle" style="min-width: 75px">{{ entry_date }}</span>
+                      <span class="cv-date">{{ entry_date }}</span>
                     {% endif %}
                   </div>
-                  <div class="col-xs-10 col-sm-10 col-md-10 mt-2 mt-md-0">
+                  <div class="col-12 col-md-9 mt-2 mt-md-0">
                     {% if section_title == 'Education' %}
                       {% assign degree = entry.degree | default: entry.studyType %}
                       <h6 class="title font-weight-bold ml-1 ml-md-4">{{ entry.institution }}</h6>

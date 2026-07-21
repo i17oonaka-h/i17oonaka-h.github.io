@@ -135,8 +135,131 @@ cv:
         summary: Awarded by the Association for Natural Language Processing for work on jointly predicting response timing and short responses for real-time spoken dialogue systems. [Award details](https://anlp.jp/nlp2025/award.html)
 
       - name: IEEE SPS Tokyo Joint Chapter Student Award
-        date: 2023-02
+        date: 2024-12
         summary: Awarded for Visual Onoma-to-Wave. [Award details](https://www.ieee-jp.org/section/tokyo/chapter/SP-01/sp.htm)
+
+    Domestic Presentations (Non-peer-reviewed):
+      - title: 音声の意味的類似度に基づいた対照学習によるリアルタイム応答選択
+        authors:
+          - 大中 緋慧
+          - 大西 一誉
+          - 吉野 幸一郎
+        journal: 言語処理学会第32回年次大会
+        date: 2026-03
+
+      - title: Voice Activity Projection とガンマ分布ハザード関数を用いて対話の間を考慮したターンシフトモデル
+        authors:
+          - 大西 一誉
+          - 大中 緋慧
+          - 吉野 幸一郎
+        journal: 言語処理学会第32回年次大会
+        date: 2026-03
+
+      - title: リアルタイム音声対話システムのための応答タイミングと短文応答の同時予測
+        authors:
+          - 大中 緋慧
+          - 河野 誠也
+          - 大西 一誉
+          - 吉野 幸一郎
+        journal: 言語処理学会第31回年次大会
+        date: 2025-03
+        url: https://www.anlp.jp/proceedings/annual_meeting/2025/pdf_dir/P10-4.pdf
+
+      - title: 話者特性に基づくターンテイキング速度の分析
+        authors:
+          - 大西 一誉
+          - 大中 緋慧
+          - 吉野 幸一郎
+        journal: 言語処理学会第31回年次大会
+        date: 2025-03
+        url: https://www.anlp.jp/proceedings/annual_meeting/2025/pdf_dir/D8-1.pdf
+
+      - title: 情報案内・傾聴対話における対話行為とターン交替時間の関係分析
+        authors:
+          - 大中 緋慧
+          - 河野 誠也
+          - 大西 一誉
+          - 吉野 幸一郎
+        journal: 人工知能学会研究会資料 言語・音声理解と対話処理研究会
+        date: 2024-11
+        url: https://doi.org/10.11517/jsaislud.102.0_96
+
+      - title: F0に基づいて伸縮された画像文字からの音声合成
+        authors:
+          - 大中 緋慧
+          - 宮崎 亮一
+          - 高道 慎之介
+        journal: 日本音響学会講演論文集
+        date: 2024-03
+        url: https://speakerdeck.com/nehi0615/f0niji-duiteshen-suo-saretahua-xiang-wen-zi-karanoyin-sheng-he-cheng
+
+      - title: 事前学習不要なDNN音声強調の反復処理に基づく性能改善
+        authors:
+          - 中田 優翔
+          - 広政 遼汰
+          - 大中 緋慧
+          - 宮崎 亮一
+        journal: 日本音響学会講演論文集
+        date: 2024-03
+
+      - title: クリーン不要なDNN音声雑音除去に用いる目的信号の分析
+        authors:
+          - 広政 遼汰
+          - 大中 緋慧
+          - 宮崎 亮一
+        journal: 日本音響学会講演論文集
+        date: 2024-03
+
+      - title: 過学習の抑制に基づく事前学習不要なDNN音声強調
+        authors:
+          - 中田 優翔
+          - 広政 遼汰
+          - 大中 緋慧
+          - 宮崎 亮一
+        journal: 第26回関西支部若手研究者交流研究発表会
+        date: 2023-12
+
+      - title: Double-DIPに基づく教師なし雑音除去の分析と性能改善
+        authors:
+          - 大中 緋慧
+          - 宮崎 亮一
+        journal: 日本音響学会講演論文集
+        date: 2023-03
+
+      - title: Visual onoma-to-wave：音源画像と画像オノマトペを利用した環境音合成の提案
+        authors:
+          - 大中 緋慧
+          - 高道 慎之介
+          - 井本 桂右
+          - 岡本 悠希
+          - 藤井 一貴
+          - 猿渡 洋
+        journal: 電子情報通信学会 音声研究会
+        date: 2023-02
+
+      - title: クリーン音声を必要としない時間領域でのDNN音声強調
+        authors:
+          - 広政 遼汰
+          - 大中 緋慧
+          - 宮崎 亮一
+        journal: 第25回関西支部若手研究者交流研究発表会
+        date: 2022-11
+
+      - title: Double-DIP に基づく単一雑音混入音声のみを用いた雑音除去の検討
+        authors:
+          - 大中 緋慧
+          - 藤村 拓弥
+          - 宮崎 亮一
+        journal: 電子情報通信学会 応用音響研究会
+        date: 2022-05
+
+      - title: 深層ニューラルネットワークにおける学習過程の信号分布に着目した雑音抑圧の検討
+        authors:
+          - 大中 緋慧
+          - 藤村 拓弥
+          - 宮崎 亮一
+        journal: 第24回関西支部若手研究者交流研究発表会
+        date: 2021-12
 
     Research Projects:
       - name: Wave-Trainer-Fit

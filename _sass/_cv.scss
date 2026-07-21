@@ -15,6 +15,31 @@ table.table-cv {
   }
 }
 
+.date-column {
+  text-align: left;
+}
+
+.cv-date {
+  display: inline-block;
+  min-width: 8.5rem;
+  padding: 0.25rem 0.5rem;
+  color: var(--global-text-color);
+  background: transparent;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 0.25rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  line-height: 1.25;
+  text-align: center;
+  white-space: nowrap;
+}
+
+@media (max-width: 767.98px) {
+  .date-column {
+    margin-bottom: 0.25rem;
+  }
+}
+
 a.btncv {
   color: var(--global-text-color) !important;
   border: 1px solid var(--global-text-color) !important;
