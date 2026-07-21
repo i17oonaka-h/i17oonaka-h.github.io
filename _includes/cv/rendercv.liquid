@@ -1,0 +1,117 @@
+{% assign cv = site.data.rendercv.cv %}
+<div class="post">
+  <header class="post-header">
+    <h1 class="post-title">
+      {{ page.title }}
+      {% if page.cv_pdf %}
+        <a
+          {% if page.cv_pdf contains '://' %}
+            href="{{ page.cv_pdf }}"
+          {% elsif page.cv_pdf contains '/' %}
+            href="{{ page.cv_pdf | relative_url }}"
+          {% else %}
+            href="{{ page.cv_pdf | prepend: '/' | prepend: site.active_lang | prepend: '/assets/pdf/' | prepend: site.baseurl }}"
+          {% endif %}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="float-right"
+          aria-label="Download CV as PDF"
+          title="Download CV as PDF"
+        >
+          <i class="fa-solid fa-file-pdf" aria-hidden="true"></i>
+        </a>
+      {% endif %}
+    </h1>
+    {% if page.description %}
+      <p class="post-description">{{ page.description }}</p>
+    {% endif %}
+  </header>
+
+  <article>
+    <div class="cv">
+      <div class="card mt-3 p-3">
+        <h3 class="card-title font-weight-medium">General information</h3>
+        <div>
+          <table class="table table-cv table-sm table-borderless table-responsive table-cv-map">
+            <tbody>
+              <tr><td class="p-1 pr-2 font-weight-bold">Name</td><td class="p-1 pl-2 font-weight-light">{{ cv.name }}</td></tr>
+              {% if cv.headline %}<tr><td class="p-1 pr-2 font-weight-bold">Title</td><td class="p-1 pl-2 font-weight-light">{{ cv.headline }}</td></tr>{% endif %}
+              {% if cv.email %}<tr><td class="p-1 pr-2 font-weight-bold">Email</td><td class="p-1 pl-2 font-weight-light"><a href="mailto:{{ cv.email }}">{{ cv.email }}</a></td></tr>{% endif %}
+              {% if cv.location %}<tr><td class="p-1 pr-2 font-weight-bold">Location</td><td class="p-1 pl-2 font-weight-light">{{ cv.location }}</td></tr>{% endif %}
+              {% if cv.sections.Profile %}<tr><td class="p-1 pr-2 font-weight-bold">Summary</td><td class="p-1 pl-2 font-weight-light">{{ cv.sections.Profile | first }}</td></tr>{% endif %}
+              {% for social in cv.social_networks %}
+                {% assign network = social.network | downcase %}
+                {% if network == 'github' %}
+                  {% assign social_url = social.username | prepend: 'https://github.com/' %}
+                {% elsif network == 'x' %}
+                  {% assign social_url = social.username | prepend: 'https://x.com/' %}
+                {% else %}
+                  {% assign social_url = nil %}
+                {% endif %}
+                <tr>
+                  <td class="p-1 pr-2 font-weight-bold">{{ social.network }}</td>
+                  <td class="p-1 pl-2 font-weight-light">
+                    {% if social_url %}<a href="{{ social_url }}" target="_blank" rel="noopener noreferrer">{{ social.username }}</a>{% else %}{{ social.username }}{% endif %}
+                  </td>
+                </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      {% for section in cv.sections %}
+        {% assign section_title = section[0] %}
+        {% assign entries = section[1] %}
+        {% if section_title == 'Profile' %}{% continue %}{% endif %}
+        <a class="anchor" id="{{ section_title | slugify }}"></a>
+        <div class="card mt-3 p-3">
+          <h3 class="card-title font-weight-medium">{{ section_title }}</h3>
+          <ul class="card-text font-weight-light list-group list-group-flush">
+            {% for entry in entries %}
+              {% assign start_date = entry.start_date | default: entry.startDate %}
+              {% assign end_date = entry.end_date | default: entry.endDate %}
+              {% assign entry_date = entry.date | default: entry.releaseDate %}
+              <li class="list-group-item">
+                <div class="row">
+                  <div class="col-xs-2 col-sm-2 col-md-2 text-center date-column">
+                    {% if start_date %}
+                      <span class="badge font-weight-bold danger-color-dark align-middle" style="min-width: 75px">{{ start_date }} – {{ end_date | default: 'Present' }}</span>
+                    {% elsif entry_date %}
+                      <span class="badge font-weight-bold danger-color-dark align-middle" style="min-width: 75px">{{ entry_date }}</span>
+                    {% endif %}
+                  </div>
+                  <div class="col-xs-10 col-sm-10 col-md-10 mt-2 mt-md-0">
+                    {% if section_title == 'Education' %}
+                      {% assign degree = entry.degree | default: entry.studyType %}
+                      <h6 class="title font-weight-bold ml-1 ml-md-4">{{ entry.institution }}</h6>
+                      <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem">{% if degree %}{{ degree }}{% if entry.area %}, {% endif %}{% endif %}{{ entry.area }}</h6>
+                    {% elsif section_title == 'Experience' %}
+                      <h6 class="title font-weight-bold ml-1 ml-md-4">{{ entry.position }}</h6>
+                      <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem">{{ entry.company }}</h6>
+                    {% elsif section_title contains 'Publication' %}
+                      <h6 class="title font-weight-bold ml-1 ml-md-4">{% if entry.url %}<a href="{{ entry.url }}" target="_blank" rel="noopener noreferrer">{{ entry.title }}</a>{% else %}{{ entry.title }}{% endif %}</h6>
+                      <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem">{{ entry.authors | join: ', ' }}</h6>
+                      <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem; font-style: italic">{{ entry.journal | default: entry.publisher }}</h6>
+                    {% elsif section_title == 'Awards' %}
+                      <h6 class="title font-weight-bold ml-1 ml-md-4">{{ entry.name }}</h6>
+                    {% else %}
+                      <h6 class="title font-weight-bold ml-1 ml-md-4">{% if entry.url %}<a href="{{ entry.url }}" target="_blank" rel="noopener noreferrer">{{ entry.name | default: entry.title }}</a>{% else %}{{ entry.name | default: entry.title }}{% endif %}</h6>
+                    {% endif %}
+                    {% if entry.location %}<p class="location ml-1 ml-md-4"><i class="fa-solid fa-location-dot iconlocation" aria-hidden="true"></i> {{ entry.location }}</p>{% endif %}
+                    {% if entry.summary %}<div class="ml-1 ml-md-4" style="font-size: 0.95rem; font-style: italic">{{ entry.summary | markdownify }}</div>{% endif %}
+                    {% if entry.highlights %}
+                      <ul class="items">
+                        {% for item in entry.highlights %}<li><span class="item">{{ item }}</span></li>{% endfor %}
+                      </ul>
+                    {% endif %}
+                  </div>
+                </div>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      {% endfor %}
+    </div>
+  </article>
+</div>

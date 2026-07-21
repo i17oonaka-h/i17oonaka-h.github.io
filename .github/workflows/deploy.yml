@@ -17,6 +17,7 @@ on:
       - "**.yml"
       - "Gemfile"
       - "Gemfile.lock"
+      - "requirements.txt"
       - "!.github/workflows/axe.yml"
       - "!.github/workflows/broken-links.yml"
       - "!.github/workflows/deploy-docker-tag.yml"
@@ -46,6 +47,7 @@ on:
       - "**.yml"
       - "Gemfile"
       - "Gemfile.lock"
+      - "requirements.txt"
       - "!.github/workflows/axe.yml"
       - "!.github/workflows/broken-links.yml"
       - "!.github/workflows/deploy-docker-tag.yml"
@@ -79,7 +81,7 @@ jobs:
       - name: Setup Python 🐍
         uses: actions/setup-python@v5
         with:
-          python-version: "3.13"
+          python-version: "3.12"
           cache: "pip" # caching pip dependencies
       - name: Update _config.yml ⚙️
         uses: fjogeleit/yaml-update-action@main
@@ -91,7 +93,10 @@ jobs:
       - name: Install and Build 🔧
         run: |
           sudo apt-get update && sudo apt-get install -y imagemagick
-          pip3 install --upgrade nbconvert
+          pip3 install --upgrade -r requirements.txt
+          rendercv render _data/rendercv.yml
+          test -f assets/rendercv/rendercv_output/hien_ohnaka_cv.pdf
+          rm -f assets/rendercv/rendercv_output/*.typ
           export JEKYLL_ENV=production
           bundle exec jekyll build
       - name: Purge unused CSS 🧹
