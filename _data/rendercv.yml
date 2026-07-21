@@ -12,7 +12,7 @@ cv:
 
   sections:
     Profile:
-      - Full-time engineer at LY Corporation working on speech synthesis, speech enhancement, and spoken dialogue systems.
+      - Full-time engineer at LY Corporation, Japan.
 
     Experience:
       - company: LY Corporation
@@ -133,6 +133,10 @@ cv:
       - name: Committee Special Award
         date: 2025-03
         summary: Awarded by the Association for Natural Language Processing for work on jointly predicting response timing and short responses for real-time spoken dialogue systems. [Award details](https://anlp.jp/nlp2025/award.html)
+
+      - name: IEEE SPS Tokyo Joint Chapter Student Award
+        date: 2023-02
+        summary: Awarded for Visual Onoma-to-Wave. [Award details](https://www.ieee-jp.org/section/tokyo/chapter/SP-01/sp.htm)
 
     Research Projects:
       - name: Wave-Trainer-Fit
