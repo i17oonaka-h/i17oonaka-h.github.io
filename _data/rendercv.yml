@@ -93,7 +93,9 @@ cv:
           - Yuma Shirahata
           - Masaya Kawamura
         journal: IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)
-        date: Accepted 2026
+        date: 2026-05
+        doi: 10.1109/ICASSP55912.2026.11461239
+        url: https://doi.org/10.1109/ICASSP55912.2026.11461239
 
       - title: Grapheme-Coherent Phonemic and Prosodic Annotation of Speech by Implicit and Explicit Grapheme Conditioning
         authors:
@@ -103,7 +105,16 @@ cv:
           - Ryuichi Yamamoto
         journal: Interspeech
         date: 2025-08
-        url: https://arxiv.org/abs/2506.04527
+        doi: 10.21437/Interspeech.2025-661
+        url: https://doi.org/10.21437/Interspeech.2025-661
+
+      - title: Modeling Turn-Taking Speed and Speaker Characteristics
+        authors:
+          - Kazuyo Onishi
+          - Hien Ohnaka
+          - Koichiro Yoshino
+        journal: Annual Meeting of the Special Interest Group on Discourse and Dialogue (SIGDIAL)
+        date: 2025-08
 
       - title: Unsupervised Speech Enhancement with Spectral Kurtosis and Double Deep Priors
         authors:
@@ -260,25 +271,6 @@ cv:
           - 宮崎 亮一
         journal: 第24回関西支部若手研究者交流研究発表会
         date: 2021-12
-
-    Research Projects:
-      - name: Wave-Trainer-Fit
-        summary: A neural vocoder with trainable priors and fixed-point iteration for high-quality speech generation from self-supervised speech features.
-        date: 2025 – 2026
-        highlights:
-          - Accepted to ICASSP 2026.
-
-      - name: Unsupervised Speech Enhancement with Spectral Kurtosis and Double Deep Priors
-        summary: An unsupervised speech enhancement method combining spectral kurtosis and deep priors.
-        date: 2024 – 2025
-        highlights:
-          - Published in Acoustical Science and Technology.
-
-      - name: Visual Onoma-to-Wave
-        summary: Environmental sound synthesis from visual onomatopoeias and sound-source images.
-        date: 2022 – 2023
-        highlights:
-          - Accepted to ICASSP 2023.
 
 design:
   theme: classic
