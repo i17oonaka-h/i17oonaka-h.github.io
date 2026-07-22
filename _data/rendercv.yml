@@ -69,7 +69,7 @@ cv:
       - institution: National Institute of Technology, Tokuyama College
         location: Japan
         area: Computer Science and Electronic Engineering
-        degree:
+        degree: B.E.
         start_date: 2022-04
         end_date: 2024-03
         highlights:
@@ -115,6 +115,7 @@ cv:
           - Koichiro Yoshino
         journal: Annual Meeting of the Special Interest Group on Discourse and Dialogue (SIGDIAL)
         date: 2025-08
+        url: https://aclanthology.org/2025.sigdial-1.2/
 
       - title: Unsupervised Speech Enhancement with Spectral Kurtosis and Double Deep Priors
         authors:
