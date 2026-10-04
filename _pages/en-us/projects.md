@@ -3,7 +3,7 @@ page_id: projects
 layout: page
 title: Projects
 permalink: /projects/
-description: 
+description:
 nav: true
 nav_order: 3
 display_categories: [research topic, small talk]

@@ -3,7 +3,7 @@ page_id: teaching
 layout: page
 permalink: /teaching/
 title: History
-description: 
+description:
 nav: true
 nav_order: 6
 ---
@@ -32,7 +32,7 @@ nav_order: 6
       <div class="degree">Full-time Engineer</div>
     </div>
   </div>
-  
+
   <div class="education-item current">
     <div class="year-range">2024.04 — 2026.03</div>
     <div class="institution">

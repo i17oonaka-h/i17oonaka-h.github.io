@@ -34,11 +34,36 @@
         <div>
           <table class="table table-cv table-sm table-borderless table-responsive table-cv-map">
             <tbody>
-              <tr><td class="p-1 pr-2 font-weight-bold">Name</td><td class="p-1 pl-2 font-weight-light">{{ cv.name }}</td></tr>
-              {% if cv.headline %}<tr><td class="p-1 pr-2 font-weight-bold">Title</td><td class="p-1 pl-2 font-weight-light">{{ cv.headline }}</td></tr>{% endif %}
-              {% if cv.email %}<tr><td class="p-1 pr-2 font-weight-bold">Email</td><td class="p-1 pl-2 font-weight-light"><a href="mailto:{{ cv.email }}">{{ cv.email }}</a></td></tr>{% endif %}
-              {% if cv.location %}<tr><td class="p-1 pr-2 font-weight-bold">Location</td><td class="p-1 pl-2 font-weight-light">{{ cv.location }}</td></tr>{% endif %}
-              {% if cv.sections.Profile %}<tr><td class="p-1 pr-2 font-weight-bold">Summary</td><td class="p-1 pl-2 font-weight-light">{{ cv.sections.Profile | first }}</td></tr>{% endif %}
+              <tr>
+                <td class="p-1 pr-2 font-weight-bold">Name</td>
+                <td class="p-1 pl-2 font-weight-light">{{ cv.name }}</td>
+              </tr>
+              {% if cv.headline %}
+                <tr>
+                  <td class="p-1 pr-2 font-weight-bold">Title</td>
+                  <td class="p-1 pl-2 font-weight-light">{{ cv.headline }}</td>
+                </tr>
+              {% endif %}
+              {% if cv.email %}
+                <tr>
+                  <td class="p-1 pr-2 font-weight-bold">Email</td>
+                  <td class="p-1 pl-2 font-weight-light">
+                    <a href="mailto:{{ cv.email }}">{{ cv.email }}</a>
+                  </td>
+                </tr>
+              {% endif %}
+              {% if cv.location %}
+                <tr>
+                  <td class="p-1 pr-2 font-weight-bold">Location</td>
+                  <td class="p-1 pl-2 font-weight-light">{{ cv.location }}</td>
+                </tr>
+              {% endif %}
+              {% if cv.sections.Profile %}
+                <tr>
+                  <td class="p-1 pr-2 font-weight-bold">Summary</td>
+                  <td class="p-1 pl-2 font-weight-light">{{ cv.sections.Profile | first }}</td>
+                </tr>
+              {% endif %}
               {% for social in cv.social_networks %}
                 {% assign network = social.network | downcase %}
                 {% if network == 'github' %}
@@ -46,12 +71,16 @@
                 {% elsif network == 'x' %}
                   {% assign social_url = social.username | prepend: 'https://x.com/' %}
                 {% else %}
-                  {% assign social_url = nil %}
+                  {% assign social_url = null %}
                 {% endif %}
                 <tr>
                   <td class="p-1 pr-2 font-weight-bold">{{ social.network }}</td>
                   <td class="p-1 pl-2 font-weight-light">
-                    {% if social_url %}<a href="{{ social_url }}" target="_blank" rel="noopener noreferrer">{{ social.username }}</a>{% else %}{{ social.username }}{% endif %}
+                    {% if social_url -%}
+                      <a href="{{ social_url }}" target="_blank" rel="noopener noreferrer">{{ social.username }}</a>
+                    {%- else -%}
+                      {{- social.username -}}
+                    {%- endif %}
                   </td>
                 </tr>
               {% endfor %}
@@ -85,24 +114,52 @@
                     {% if section_title == 'Education' %}
                       {% assign degree = entry.degree | default: entry.studyType %}
                       <h6 class="title font-weight-bold ml-1 ml-md-4">{{ entry.institution }}</h6>
-                      <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem">{% if degree %}{{ degree }}{% if entry.area %}, {% endif %}{% endif %}{{ entry.area }}</h6>
+                      <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem">
+                        {% if degree -%}
+                          {{- degree -}}
+                          {%- if entry.area %}, {% endif -%}
+                        {%- endif -%}
+                        {{- entry.area }}
+                      </h6>
                     {% elsif section_title == 'Experience' %}
                       <h6 class="title font-weight-bold ml-1 ml-md-4">{{ entry.position }}</h6>
                       <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem">{{ entry.company }}</h6>
                     {% elsif section_title contains 'Publication' %}
-                      <h6 class="title font-weight-bold ml-1 ml-md-4">{% if entry.url %}<a href="{{ entry.url }}" target="_blank" rel="noopener noreferrer">{{ entry.title }}</a>{% else %}{{ entry.title }}{% endif %}</h6>
+                      <h6 class="title font-weight-bold ml-1 ml-md-4">
+                        {% if entry.url -%}
+                          <a href="{{ entry.url }}" target="_blank" rel="noopener noreferrer">{{ entry.title }}</a>
+                        {%- else -%}
+                          {{- entry.title -}}
+                        {%- endif %}
+                      </h6>
                       <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem">{{ entry.authors | join: ', ' }}</h6>
                       <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem; font-style: italic">{{ entry.journal | default: entry.publisher }}</h6>
                     {% elsif section_title == 'Awards' %}
                       <h6 class="title font-weight-bold ml-1 ml-md-4">{{ entry.name }}</h6>
                     {% else %}
-                      <h6 class="title font-weight-bold ml-1 ml-md-4">{% if entry.url %}<a href="{{ entry.url }}" target="_blank" rel="noopener noreferrer">{{ entry.name | default: entry.title }}</a>{% else %}{{ entry.name | default: entry.title }}{% endif %}</h6>
+                      <h6 class="title font-weight-bold ml-1 ml-md-4">
+                        {% if entry.url -%}
+                          <a href="{{ entry.url }}" target="_blank" rel="noopener noreferrer">{{ entry.name | default: entry.title }}</a>
+                        {%- else -%}
+                          {{- entry.name | default: entry.title -}}
+                        {%- endif %}
+                      </h6>
                     {% endif %}
-                    {% if entry.location %}<p class="location ml-1 ml-md-4"><i class="fa-solid fa-location-dot iconlocation" aria-hidden="true"></i> {{ entry.location }}</p>{% endif %}
-                    {% if entry.summary %}<div class="ml-1 ml-md-4" style="font-size: 0.95rem; font-style: italic">{{ entry.summary | markdownify }}</div>{% endif %}
+                    {% if entry.location %}
+                      <p class="location ml-1 ml-md-4">
+                        <i class="fa-solid fa-location-dot iconlocation" aria-hidden="true"></i> {{ entry.location }}
+                      </p>
+                    {% endif %}
+                    {% if entry.summary %}
+                      <div class="ml-1 ml-md-4" style="font-size: 0.95rem; font-style: italic">{{ entry.summary | markdownify }}</div>
+                    {% endif %}
                     {% if entry.highlights %}
                       <ul class="items">
-                        {% for item in entry.highlights %}<li><span class="item">{{ item }}</span></li>{% endfor %}
+                        {% for item in entry.highlights %}
+                          <li>
+                            <span class="item">{{ item }}</span>
+                          </li>
+                        {% endfor %}
                       </ul>
                     {% endif %}
                   </div>
