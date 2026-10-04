@@ -29,8 +29,8 @@ latest_posts:
 
 # Hien Ohnaka
 
-I'm a master student of Nara Institute of Science and Technology (NAIST), Japan.
-My professor is <a href='https://pomdp.net/'>Koichiro Yoshino</a>.
-Also, I'm a part-time job engineer/researcher at <a href='https://research.lycorp.co.jp/en'>LY corp</a>.
+I'm a doctoral student in the Graduate School of Engineering Science at The University of Osaka, Japan.
+I belong to the <a href='https://www.dis.sys.es.osaka-u.ac.jp/'>Dialogue Intelligence Systems Laboratory (Yoshino Laboratory)</a>, supervised by <a href='https://pomdp.net/'>Prof. Koichiro Yoshino</a>.
+I'm also a full-time engineer at <a href='https://www.lycorp.co.jp/en/'>LY Corporation</a>.
 
-My reseach interests are spoken language processing and audio signal processing.
+My research interests are spoken language processing and audio signal processing.

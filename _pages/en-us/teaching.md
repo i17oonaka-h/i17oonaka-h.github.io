@@ -14,6 +14,18 @@ nav_order: 6
 
 <div class="education-section">
   <div class="education-item current">
+    <div class="year-range">2026.10 — now</div>
+    <div class="institution">
+      <h3>The University of Osaka</h3>
+      <div class="degree">Graduate School of Engineering Science, Doctoral Course</div>
+      <div class="details">
+        <span class="lab">🔬 Laboratory: <a href="https://www.dis.sys.es.osaka-u.ac.jp/" target="_blank" rel="noopener noreferrer">Dialogue Intelligence Systems Laboratory (Yoshino Laboratory)</a></span>
+        <span class="supervisor">👨‍🏫 Supervisor: Prof. Koichiro Yoshino</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="education-item current">
     <div class="year-range">2026.04-now</div>
     <div class="institution">
       <h3>LY Corporation</h3>
@@ -293,4 +305,3 @@ nav_order: 6
   }
 }
 </style>
-

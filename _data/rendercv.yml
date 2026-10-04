@@ -1,6 +1,6 @@
 cv:
   name: Hien Ohnaka
-  headline: Engineer
+  headline: Doctoral Student & Engineer
   email: ohnaka.hien@gmail.com
   location: Japan
 
@@ -12,7 +12,7 @@ cv:
 
   sections:
     Profile:
-      - Full-time engineer at LY Corporation, Japan.
+      - Doctoral student at The University of Osaka and full-time engineer at LY Corporation, Japan.
 
     Experience:
       - company: LY Corporation
@@ -55,6 +55,16 @@ cv:
           - Researched environmental sound synthesis from visual onomatopoeia; the work was accepted to ICASSP 2023.
 
     Education:
+      - institution: The University of Osaka
+        location: Japan
+        area: Engineering Science
+        degree: Ph.D.
+        start_date: 2026-10
+        end_date: present
+        highlights:
+          - Graduate School of Engineering Science, Doctoral Course.
+          - "[Dialogue Intelligence Systems Laboratory (Yoshino Laboratory)](https://www.dis.sys.es.osaka-u.ac.jp/), supervised by Prof. Koichiro Yoshino."
+
       - institution: Nara Institute of Science and Technology
         location: Japan
         area: Information Science

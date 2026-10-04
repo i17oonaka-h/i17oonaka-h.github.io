@@ -25,4 +25,4 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-I'm a full-time engineer of LY Corporation, Japan.
+I'm a doctoral student at The University of Osaka and a full-time engineer at LY Corporation, Japan.
